@@ -26,6 +26,10 @@ export class ThreadsService {
 
     }
 
+    loadNewMessagesForUser(): Observable<Message[]> {
+        return null
+    }
+
 }
 
 

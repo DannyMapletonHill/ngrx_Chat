@@ -18,6 +18,7 @@ import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 import {uiState} from "./store/reducers/uiStateReducer";
 import {storeData} from "./store/reducers/uiStoreDataReducer";
 import {WriteNewMessageEffectService} from "./store/effects/write-new-message-effect.service";
+import { ServerNotificationsEffectService } from 'app/store/effects/server-notifications-effect.service';
 
 
 
@@ -49,6 +50,7 @@ export function storeReducer(state: ApplicationState, action: Action) {
       StoreModule.provideStore(storeReducer, INITIAL_APPLICATION_STATE),
       EffectsModule.run(LoadThreadsEffectService),
       EffectsModule.run(WriteNewMessageEffectService),
+      EffectsModule.run(ServerNotificationsEffectService),
       StoreDevtoolsModule.instrumentOnlyWithExtension()
   ],
   providers: [ThreadsService],

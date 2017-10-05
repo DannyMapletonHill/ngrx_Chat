@@ -19,7 +19,6 @@ export class WriteNewMessageEffectService {
         .ofType(SEND_NEW_MESSAGE_ACTION)
         .debug("sending new message to the server")
         .switchMap(action => this.threadsService.saveNewMessage(action.payload));
-
 }
 
 
