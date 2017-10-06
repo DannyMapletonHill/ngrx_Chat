@@ -6,10 +6,8 @@ import {StoreData, INITIAL_STORE_DATA} from "./store-data";
 
 
 export interface ApplicationState {
-
     uiState: UiState,
     storeData: StoreData
-
 }
 
 
